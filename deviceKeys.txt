@@ -1,0 +1,80 @@
+Scope id:  0ne000764A2
+
+service endpoint: bszdemodps.azure-devices-provisioning.net
+
+. {Invoke-WebRequest -useb https://aka.ms/iotedge-win} | Invoke-Expression; `Initialize-IoTEdge -Dps -ScopeId 0ne000764A2 -RegistrationId sosedgedevice1
+
+--------------------------------------------------------
+Extracting endorsement key.
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: sosedgedevice1
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAqasJBFjumItnT4iivihvj11Q/6XBzuiiNSE5IycASv8bvd7Jst9c/066dNvg5jNyqfjhapqemVD1U1HTL1VWPdVHix9Du1k7YaeNb+A9Knm7ds+RP0HiNY/NdXaCD9+hvzcEWDzpAMdAjdyEZrqUg70BC1flA/A2XQYsYARStTl5j1Z/I1FKnnMyfxnyhI8o5ms/hNTS1FuXR98Ms4UEC8FYKKsFEctqttkhDo7GE+xfR854jtyMqdsibMGsm0+B8FemXMmbwwKXCAqLDEvl3mTksdMAJVse0WETHNjTGqxO00MldgdaF8qehA3z9cRsNoitP+lWif3IUlZ/iW6bVw==
+        Device ID: sosedev1(or any other valid DeviceID)
+
+-------------------
+        Mechanism: TPM
+        Registration ID: sosedgedevice2
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAqasJBFjumItnT4iivihvj11Q/6XBzuiiNSE5IycASv8bvd7Jst9c/066dNvg5jNyqfjhapqemVD1U1HTL1VWPdVHix9Du1k7YaeNb+A9Knm7ds+RP0HiNY/NdXaCD9+hvzcEWDzpAMdAjdyEZrqUg70BC1flA/A2XQYsYARStTl5j1Z/I1FKnnMyfxnyhI8o5ms/hNTS1FuXR98Ms4UEC8FYKKsFEctqttkhDo7GE+xfR854jtyMqdsibMGsm0+B8FemXMmbwwKXCAqLDEvl3mTksdMAJVse0WETHNjTGqxO00MldgdaF8qehA3z9cRsNoitP+lWif3IUlZ/iW6bVw==
+        Device ID: sosedev2  (or any other valid DeviceID)
+
+
+----------------------------
+
+
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: sosedgedevice3
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAyd2tnilSlTyyDoPVen2nNtjOp8jJCBpEHW1t66mBO1MAJde9Mr3lW8lnjpUj4fNUafVGI1kJ6OEqrdBO4N1phgOhT8UZhR4kZk8M2k/nMIn//U40R+xY4HgwDYX0dPFjeLCAuHg9W5ypW6ooNm6dxnjhLURrxiLRPR+E+VS/K+QTXtfCgldMCsIWME12nqQ5X7Khe6kp+1Gla7N3/KRMunM90Sxd2foEex7tR+cjPrsHMWGJy2h8nHvr05VtrtYCx+HjuDzWQ5v8GGFtNVSrubLXz46W205vbhqHAYRz4OmqAs9ial2eIrcDxzihaNJW2JBemowIsfnaEwkkIy7v5Q==
+        Device ID: sosedev3 (or any other valid DeviceID)
+
+--------------------------
+Extracting endorsement key.
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: sosedgedevice4
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAyd2tnilSlTyyDoPVen2nNtjOp8jJCBpEHW1t66mBO1MAJde9Mr3lW8lnjpUj4fNUafVGI1kJ6OEqrdBO4N1phgOhT8UZhR4kZk8M2k/nMIn//U40R+xY4HgwDYX0dPFjeLCAuHg9W5ypW6ooNm6dxnjhLURrxiLRPR+E+VS/K+QTXtfCgldMCsIWME12nqQ5X7Khe6kp+1Gla7N3/KRMunM90Sxd2foEex7tR+cjPrsHMWGJy2h8nHvr05VtrtYCx+HjuDzWQ5v8GGFtNVSrubLXz46W205vbhqHAYRz4OmqAs9ial2eIrcDxzihaNJW2JBemowIsfnaEwkkIy7v5Q==
+        Device ID: sosedv4(or any other valid DeviceID)
+
+-----------------------------
+Extracting endorsement key.
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: sosedgedevice5
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAyd2tnilSlTyyDoPVen2nNtjOp8jJCBpEHW1t66mBO1MAJde9Mr3lW8lnjpUj4fNUafVGI1kJ6OEqrdBO4N1phgOhT8UZhR4kZk8M2k/nMIn//U40R+xY4HgwDYX0dPFjeLCAuHg9W5ypW6ooNm6dxnjhLURrxiLRPR+E+VS/K+QTXtfCgldMCsIWME12nqQ5X7Khe6kp+1Gla7N3/KRMunM90Sxd2foEex7tR+cjPrsHMWGJy2h8nHvr05VtrtYCx+HjuDzWQ5v8GGFtNVSrubLXz46W205vbhqHAYRz4OmqAs9ial2eIrcDxzihaNJW2JBemowIsfnaEwkkIy7v5Q==
+        Device ID: sosedev5  (or any other valid DeviceID)
+-------------------
+Extracting endorsement key.
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: sosedgedevice6
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAyd2tnilSlTyyDoPVen2nNtjOp8jJCBpEHW1t66mBO1MAJde9Mr3lW8lnjpUj4fNUafVGI1kJ6OEqrdBO4N1phgOhT8UZhR4kZk8M2k/nMIn//U40R+xY4HgwDYX0dPFjeLCAuHg9W5ypW6ooNm6dxnjhLURrxiLRPR+E+VS/K+QTXtfCgldMCsIWME12nqQ5X7Khe6kp+1Gla7N3/KRMunM90Sxd2foEex7tR+cjPrsHMWGJy2h8nHvr05VtrtYCx+HjuDzWQ5v8GGFtNVSrubLXz46W205vbhqHAYRz4OmqAs9ial2eIrcDxzihaNJW2JBemowIsfnaEwkkIy7v5Q==
+        Device ID: sosedev6  (or any other valid DeviceID)
+---------------
+
+Extracting endorsement key.
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: sosedgedevice7
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAyd2tnilSlTyyDoPVen2nNtjOp8jJCBpEHW1t66mBO1MAJde9Mr3lW8lnjpUj4fNUafVGI1kJ6OEqrdBO4N1phgOhT8UZhR4kZk8M2k/nMIn//U40R+xY4HgwDYX0dPFjeLCAuHg9W5ypW6ooNm6dxnjhLURrxiLRPR+E+VS/K+QTXtfCgldMCsIWME12nqQ5X7Khe6kp+1Gla7N3/KRMunM90Sxd2foEex7tR+cjPrsHMWGJy2h8nHvr05VtrtYCx+HjuDzWQ5v8GGFtNVSrubLXz46W205vbhqHAYRz4OmqAs9ial2eIrcDxzihaNJW2JBemowIsfnaEwkkIy7v5Q==
+        Device ID: sosedev7  (or any other valid DeviceID)
+----------------
+
+Extracting endorsement key.
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: sosedgedevice8
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAyd2tnilSlTyyDoPVen2nNtjOp8jJCBpEHW1t66mBO1MAJde9Mr3lW8lnjpUj4fNUafVGI1kJ6OEqrdBO4N1phgOhT8UZhR4kZk8M2k/nMIn//U40R+xY4HgwDYX0dPFjeLCAuHg9W5ypW6ooNm6dxnjhLURrxiLRPR+E+VS/K+QTXtfCgldMCsIWME12nqQ5X7Khe6kp+1Gla7N3/KRMunM90Sxd2foEex7tR+cjPrsHMWGJy2h8nHvr05VtrtYCx+HjuDzWQ5v8GGFtNVSrubLXz46W205vbhqHAYRz4OmqAs9ial2eIrcDxzihaNJW2JBemowIsfnaEwkkIy7v5Q==
+        Device ID: sosedev9  (or any other valid DeviceID)
+------------------
+
+Extracting endorsement key.
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: sosedgedevice9
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAyd2tnilSlTyyDoPVen2nNtjOp8jJCBpEHW1t66mBO1MAJde9Mr3lW8lnjpUj4fNUafVGI1kJ6OEqrdBO4N1phgOhT8UZhR4kZk8M2k/nMIn//U40R+xY4HgwDYX0dPFjeLCAuHg9W5ypW6ooNm6dxnjhLURrxiLRPR+E+VS/K+QTXtfCgldMCsIWME12nqQ5X7Khe6kp+1Gla7N3/KRMunM90Sxd2foEex7tR+cjPrsHMWGJy2h8nHvr05VtrtYCx+HjuDzWQ5v8GGFtNVSrubLXz46W205vbhqHAYRz4OmqAs9ial2eIrcDxzihaNJW2JBemowIsfnaEwkkIy7v5Q==
+        Device ID: sosedev9  (or any other valid DeviceID)
+
+
+
+

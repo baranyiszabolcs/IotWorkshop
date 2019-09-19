@@ -1,0 +1,54 @@
+
+--------------------
+#Create and using provisioning service
+-------------------
+#Prerequisit
+#Create  IoT Hub Device Provisioning Service  using azcli:
+#List locations of dps
+az provider show --namespace Microsoft.Devices --query "resourceTypes[?resourceType=='ProvisioningServices'].locations | [0]" --out table
+#Create
+az iot dps create --name bszdemodps --resource-group bszedgedemo --location westeurope
+#check if it is created
+az iot dps list -o table
+
+#link to IoTHub
+az iot dps linked-hub create --dps-name bszdemodps --resource-group bszedgedemo --connection-string HostName=bsziothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=zhEb4IJwxkJptoepoguOGb/YLLJLTj42lvjff38wxPo= --location westeurope
+# list linked hubs
+az iot dps linked-hub list --dps-name bszdemodps --resource-group bszedgedemo -o table
+
+#check dps 
+az iot dps show --name bszdemodps
+
+#Create an enrollment 'MyEnrollment' with static allocation policy in the Azure IoT Device
+#Provisioning service '{dps_name}' in the resource group '{resource_group_name}'.
+#        az iot dps enrollment create -g {resource_group_name} --dps-name {dps_name} --enrollment-id
+#        {enrollment_id} --attestation-type tpm --allocation-policy static --endorsement-key
+#        14963E8F3BA5B3984110B3C1CA8E8B89 --iot-hubs {iot_hub_host_name} --device-id {mydeviceid}
+
+## Create enrollment for EDGE  device use portal and dont forget tho check Edge enabled flag
+
+
+
+------------------------------
+device provisioning enrollments
+
+Use tpmgenerator appliation to generate endorsement Id
+usage  : cd \TPMGenerator
+dotnet  TpmSample.dll  ScopeID(copy from device provisionong service  )   Registration_id (choose your own)
+
+dotnet TpmSample.dll 0ne000764A2  BSZSOSdevice2
+
+In your Azure Device Provisioning Service please go to 'Manage enrollments' and select 'Individual Enrollments'. Select 'Add' then fill in the following:
+        Mechanism: TPM
+        Registration ID: testtpmregistration1
+        Endorsement key: AToAAQALAAMAsgAgg3GXZ0SEs/gakMyNRqXXJP1S124GUgtk8qHaGzMUaaoABgCAAEMAEAgAAAAAAAEAs+1VuQ3y2MG0pxle1j3qxIEHYMuEOaf9bCb0KMz6yenUeN+WuoDxauQTqjm6YeKs0BfbI0seH6Bavl2+0zqelytldfwHhrGAWCBRudKlwZkMmVc7Oa/7nHOTvC2PcaZmOc/CZ5sbeNLqRpoyLsGM6ag1utO6gNx68vjxb3oW+cwmMj5m4XL7895WGMvdQYK4W17GlnDLlSUWgCGTtooXbgf4zUzFVFr7YNeMi1HjyGfCQDjSDveQVnJ4++sDVS4BsEveVvHEIhEU47O4VzCts4OmJMYoqjk/UJ3FNgv59GeXe4xp+cL6sN3Tr42kwkWLnNNmKqx9rdg5NrUYlofT+Q==
+        Device ID: iothubtpmdevice1 (or any other valid DeviceID)
+		
+----
+
+Create IoT Edge  init  with  device provisioning service
+##Create IoT  hub with  Device provisioning service
+. {Invoke-WebRequest -useb https://aka.ms/iotedge-win} | Invoke-Expression; ` Initialize-IoTEdge -Dps
+#full format:
+. {Invoke-WebRequest -useb https://aka.ms/iotedge-win} | Invoke-Expression; ` Initialize-IoTEdge -Dps -ScopeId {scope ID} -RegistrationId {registration ID}
+

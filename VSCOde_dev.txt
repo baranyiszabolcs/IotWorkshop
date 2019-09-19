@@ -1,0 +1,41 @@
+1.	Create new project	
+dotnet new console -n SensirionConsole  
+
+
+2. To use appsettings.jsuon as configuration add the following lines to the project  file
+    <content Include="appsettings.json">
+    <copytooutputdirectory>Always</copytooutputdirectory>
+    </content>
+
+
+1. Run `dotnet restore` to install the required packages.
+2. Run `dotnet run` to build and run the simulated device application.
+3. dotnet build     if needs only build
+#Publish  to deice:  assuming dotnet core 2.1 already installed
+4.	dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false
+
+
+use appconfig  to read config do the following steps in the standard project  int  the <ItemGroup> section
+  create appsetting.json
+
+add packages  to project  before   use it  command if we using vs code
+ dotnet add package Microsoft.Extensions.Configuration
+ dotnet add package Microsoft.Extensions.Configuration.FileExtensions
+ dotnet add package Microsoft.Extensions.Configuration.Json 
+
+
+Using VS code modify the  project file add this to item group to make sure appsettings copied to target
+
+    <content Include="appsettings.json">
+    <copytooutputdirectory>Always</copytooutputdirectory>
+    </content>
+
+
+---------------------------------------------
+IoT  EDGE development in vscode
+F1  /  shift+ctrrl+p  Azure Iot Edge:new IoT  Solution
+	Solution Name:   Sensirionedge
+	Module : c#
+	MOdule Name :  sensirionReader
+	container registry:    ( or create you own in the subscription)
+		soscontreg0.azurecr.io

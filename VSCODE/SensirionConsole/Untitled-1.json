@@ -1,0 +1,72 @@
+{
+    "scd30": [
+        {
+            "name": "co2(ppm)",
+            "value": 1179
+        },
+        {
+            "name": "temp(C)",
+            "value": 26.05
+        },
+        {
+            "name": "humidity(%)",
+            "value": 50.18
+        }
+    ],
+    "sps30_mass_conc": [
+        {
+            "name": "PM1.0",
+            "value": 2.52
+        },
+        {
+            "name": "PM2.5",
+            "value": 2.83
+        },
+        {
+            "name": "PM4.0",
+            "value": 3.04
+        },
+        {
+            "name": "PM10",
+            "value": 3.05
+        }
+    ],
+    "sps30_number_conc": [
+        {
+            "name": "PM0.5",
+            "value": 18.04
+        },
+        {
+            "name": "PM1.0",
+            "value": 20.97
+        },
+        {
+            "name": "PM2.5",
+            "value": 21.32
+        },
+        {
+            "name": "PM4.0",
+            "value": 21.36
+        },
+        {
+            "name": "PM10",
+            "value": 21.36
+        }
+    ],
+    "sgpc3": [
+        {
+            "name": "TVOC",
+            "value": 0
+        }
+    ],
+    "sht31d": [
+        {
+            "name": "temp(C)",
+            "value": 24.39
+        },
+        {
+            "name": "humidity(%)",
+            "value": 57.19
+        }
+    ]
+}
